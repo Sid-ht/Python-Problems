@@ -1,0 +1,35 @@
+from collections import Counter
+class Solution:
+	def areAnagrams(self, A: str, B: str) -> bool:
+		# add your logic here
+		if Counter(A) == Counter(B):
+			return True
+		else:
+			return False
+ 
+ 
+class Solution:
+	def areAnagrams(self, A: str, B: str) -> bool:
+		# add your logic here
+		if sorted(A) == sorted(B):
+			return True
+		else:
+			return False
+      
+      
+class Solution:
+	def areAnagrams(self, A: str, B: str) -> bool:
+		# add your logic here
+		d1, d2 = {}, {}
+		for i in A:
+			if i not in d1:
+				d1[i] = 1
+			else:
+				d1[i]+= 1
+		
+		for j in B:
+			if j not in d2:
+				d2[j] = 1
+			else:
+				d2[j]+= 1
+		return if d1 == d2
